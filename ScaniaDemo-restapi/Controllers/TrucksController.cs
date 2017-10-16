@@ -14,37 +14,30 @@ namespace ScaniaDemo_restapi.Controllers
     public class TrucksController : Controller
     {
         ITrucks _trucks;
+
         public TrucksController(ITrucks trucks) {
             _trucks = trucks;
         }
 
-        internal List<Truck> getTrucks() {
-            List<Truck> trucks = new List<Truck>();
-
-            trucks.Add(new Truck() { Id = 1, ModelId = 230, Driver = "Robert Mayer", Km = 1337, RegistrationNumber = "ABC 123" });
-            trucks.Add(new Truck() { Id = 2, ModelId = 230, Driver = "Winston Mayer", Km = 242323, RegistrationNumber = "DEF 456" });
-
-            return trucks;
-        }
-
         // GET: api/trucks
         [HttpGet]
-        public IEnumerable<Truck> Get()
+        public async Task<List<TruckEntity>> Get()
         {
-            return this.getTrucks();
+            return await _trucks.Get();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Truck Get(int id)
+        public TruckEntity Get(int id)
         {
-            return this.getTrucks().FirstOrDefault(t => t.Id == id);
+            return null;
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public async Task Post([FromBody]TruckEntity value)
         {
+            await _trucks.Add(value);
         }
 
         // PUT api/values/5

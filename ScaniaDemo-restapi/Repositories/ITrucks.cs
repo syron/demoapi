@@ -7,7 +7,7 @@ namespace ScaniaDemo_restapi.Repositories
 {
 	public interface ITrucks
     {
-        Task Add(int id, int modelId, string regNo, double km, string driver);
+        Task Add(TruckEntity entity);
 
         Task<List<TruckEntity>> Get();
     }

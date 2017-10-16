@@ -19,7 +19,6 @@ namespace ScaniaDemo_restapi.Repositories
         private CloudTableClient _tableClient;
         private CloudTable _table;
 
-		
         public Trucks()
         {
             _storageAccount = CloudStorageAccount.Parse(_storageConnectionString);
@@ -27,14 +26,9 @@ namespace ScaniaDemo_restapi.Repositories
             _table = _tableClient.GetTableReference("trucks");
         }
 
-        public async Task Add(int id, int modelId, string regNo, double km, string driver) 
+        public async Task Add(TruckEntity entity) 
         {
-            TruckEntity te = new TruckEntity(100, 1);
-            te.Driver = driver;
-            te.RegistrationNumber = regNo;
-            te.Km = km;
-
-            TableOperation to = TableOperation.Insert(te);
+            TableOperation to = TableOperation.Insert(entity);
             await _table.ExecuteAsync(to);
         }
 
