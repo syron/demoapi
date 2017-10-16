@@ -37,6 +37,8 @@ namespace ScaniaDemo_restapi.Controllers
         [HttpPost]
         public async Task Post([FromBody]TruckEntity value)
         {
+            value.PartitionKey = value.ModelId.ToString();
+            value.RowKey = value.Id.ToString();
             await _trucks.Add(value);
         }
 
