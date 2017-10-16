@@ -1,11 +1,21 @@
 ﻿using System;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace ScaniaDemo_restapi.Models
 {
-    // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
-    public class Truck
+    public class TruckEntity : TableEntity
     {
-        public int Id 
+        public TruckEntity(int modelId, int id)
+        {
+            this.PartitionKey = modelId.ToString();
+            this.RowKey = id.ToString();
+        }
+
+        public TruckEntity()
+        {
+        }
+
+        public int Id
         {
             get;
             set;
@@ -20,12 +30,12 @@ namespace ScaniaDemo_restapi.Models
             get;
             set;
         }
-        public double Km 
+        public double Km
         {
             get;
             set;
         }
-        public string Driver 
+        public string Driver
         {
             get;
             set;
