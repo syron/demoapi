@@ -20,7 +20,7 @@ namespace ScaniaDemo_restapi.Controllers
 
         internal List<Truck> getTrucks() {
             List<Truck> trucks = new List<Truck>();
-            _trucks.Add();
+
             trucks.Add(new Truck() { Id = 1, ModelId = 230, Driver = "Robert Mayer", Km = 1337, RegistrationNumber = "ABC 123" });
             trucks.Add(new Truck() { Id = 2, ModelId = 230, Driver = "Winston Mayer", Km = 242323, RegistrationNumber = "DEF 456" });
 

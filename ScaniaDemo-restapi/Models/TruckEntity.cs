@@ -20,21 +20,25 @@ namespace ScaniaDemo_restapi.Models
             get;
             set;
         }
+
         public int ModelId
         {
             get;
             set;
         }
+
         public string RegistrationNumber
         {
             get;
             set;
         }
+
         public double Km
         {
             get;
             set;
         }
+
         public string Driver
         {
             get;

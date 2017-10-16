@@ -17,13 +17,41 @@ namespace ScaniaDemo_restapi.Repositories
         private readonly string _storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=scaniademoapi;AccountKey=yA3tlMOVuMwF78mYtzgw3h6AX7ZkY+zMOAt976YfgWKpx/R+QRbalawxUV9V/3Dw/crs717ErpzF6a4JPXYBHw==;EndpointSuffix=core.windows.net";
         private CloudStorageAccount _storageAccount;
         private CloudTableClient _tableClient;
+        private CloudTable _table;
+
 		
         public Trucks()
         {
             _storageAccount = CloudStorageAccount.Parse(_storageConnectionString);
             _tableClient = _storageAccount.CreateCloudTableClient();
+            _table = _tableClient.GetTableReference("trucks");
         }
 
-        public void Add() {}
+        public async Task Add(int id, int modelId, string regNo, double km, string driver) 
+        {
+            TruckEntity te = new TruckEntity(100, 1);
+            te.Driver = driver;
+            te.RegistrationNumber = regNo;
+            te.Km = km;
+
+            TableOperation to = TableOperation.Insert(te);
+            await _table.ExecuteAsync(to);
+        }
+
+        public async Task<List<TruckEntity>> Get() 
+        {
+            var query = new TableQuery<TruckEntity>();
+
+            TableContinuationToken token = null;
+            var entities = new List<TruckEntity>();
+            do
+            {
+                var queryResult = await _table.ExecuteQuerySegmentedAsync(new TableQuery<TruckEntity>(), token);
+                entities.AddRange(queryResult);
+                token = queryResult.ContinuationToken;
+            } while (token != null);
+
+            return entities;
+        }
     }
 }
