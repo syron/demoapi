@@ -28,9 +28,9 @@ namespace ScaniaDemo_restapi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public TruckEntity Get(int id)
+        public async Task<TruckEntity> Get(int id)
         {
-            return null;
+            return await _trucks.GetById(id);
         }
 
         // POST api/values

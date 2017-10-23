@@ -47,5 +47,11 @@ namespace ScaniaDemo_restapi.Repositories
 
             return entities;
         }
+
+        public async Task<TruckEntity> GetById(int id) {
+            var query = new TableQuery<TruckEntity>();
+
+            return (await this.Get()).FirstOrDefault(t => t.Id == id);
+        }
     }
 }

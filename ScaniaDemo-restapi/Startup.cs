@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ScaniaDemo_restapi.Repositories;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace ScaniaDemo_restapi
 {
@@ -26,6 +27,11 @@ namespace ScaniaDemo_restapi
         {
             services.AddTransient<ITrucks, Trucks>();
             services.AddMvc();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Trucks API", Version = "v1.0.0" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +41,14 @@ namespace ScaniaDemo_restapi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Trucks API v1.0.0");
+            });
 
             app.UseMvc();
         }

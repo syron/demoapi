@@ -10,5 +10,7 @@ namespace ScaniaDemo_restapi.Repositories
         Task Add(TruckEntity entity);
 
         Task<List<TruckEntity>> Get();
+
+        Task<TruckEntity> GetById(int id);
     }
 }
