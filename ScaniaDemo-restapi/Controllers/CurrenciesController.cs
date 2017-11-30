@@ -17,6 +17,19 @@ namespace ScaniaDemo_restapi.Controllers
         public string Get()
         {
             var url = "https://api.fixer.io/latest";
+
+            var client = new HttpClient();
+            var stringTask = client.GetStringAsync(url);
+            stringTask.Wait();
+
+            return stringTask.Result;
+        }
+
+        [HttpGet]
+        [Route("{paramBase}")]
+        public string GetByBase(string paramBase)
+        {
+            var url = $"https://api.fixer.io/latest?base={paramBase}";
             var client = new HttpClient();
             var stringTask = client.GetStringAsync(url);
             stringTask.Wait();

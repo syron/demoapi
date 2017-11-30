@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{355D5C7A-366F-4402-AFC9-D0D400875E93}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ScaniaDemo-restapi/Controllers/CurrenciesController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ScaniaDemo-restapi/Program.cs">
     <Files>
-      <File FileName="ScaniaDemo-restapi/Controllers/CurrenciesController.cs" Line="20" Column="39" />
+      <File FileName="ScaniaDemo-restapi/Controllers/CurrenciesController.cs" Line="27" Column="10" />
+      <File FileName="ScaniaDemo-restapi/Program.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
