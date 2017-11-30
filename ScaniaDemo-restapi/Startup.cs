@@ -25,7 +25,16 @@ namespace ScaniaDemo_restapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // dependency injection
             services.AddTransient<ITrucks, Trucks>();
+
+            // dotnetcore stuff :)
+            services.AddCors(o => o.AddPolicy("TrucksPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
             services.AddMvc();
 
             services.AddSwaggerGen(c =>
@@ -43,12 +52,12 @@ namespace ScaniaDemo_restapi
             }
 
             app.UseSwagger();
-
-            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Trucks API v1.0.0");
             });
+
+            app.UseCors("TrucksPolicy");
 
             app.UseMvc();
         }
