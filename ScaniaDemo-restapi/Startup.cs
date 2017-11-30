@@ -8,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using ScaniaDemo_restapi.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace ScaniaDemo_restapi
@@ -25,9 +24,6 @@ namespace ScaniaDemo_restapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // dependency injection
-            services.AddTransient<ITrucks, Trucks>();
-
             // dotnetcore stuff :)
             services.AddCors(o => o.AddPolicy("TrucksPolicy", builder =>
             {
