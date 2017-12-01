@@ -21,12 +21,17 @@ namespace ScaniaDemo_restapi.Controllers
         public async Task<string> Get()
         {
             var url = "https://eurest.mashie.com/public/menu/sn%C3%A4ckviken/bad07c57?country=se";
+            //url = "https://eurest.mashie.com/public/menu/sj%C3%B6kringlan/9104e9a0?country=se";
 
+            return await GetMenu(url);
+        }
+
+        private async Task<string> GetMenu(string url) {
             var client = new HttpClient();
-            HttpResponseMessage result = await client.GetAsync(url); 
-            Stream stream = await result.Content.ReadAsStreamAsync(); 
+            HttpResponseMessage result = await client.GetAsync(url);
+            Stream stream = await result.Content.ReadAsStreamAsync();
 
-            HtmlDocument doc = new HtmlDocument(); 
+            HtmlDocument doc = new HtmlDocument();
             doc.Load(stream);
 
             HtmlNodeCollection links = doc.DocumentNode.SelectNodes("//script");
@@ -39,7 +44,8 @@ namespace ScaniaDemo_restapi.Controllers
             var regex = @"new Date\([0-9]{1,}\)"; // finds all "new Date(123)"
 
             var match = Regex.Match(newData, regex);
-            while (match.Success) {
+            while (match.Success)
+            {
                 var val = match.Value;
 
                 var intRegex = @"[0-9]{1,}";
@@ -47,7 +53,8 @@ namespace ScaniaDemo_restapi.Controllers
 
                 var initialValue = string.Empty;
                 var newValue = string.Empty;
-                while (intMatch.Success) {
+                while (intMatch.Success)
+                {
                     initialValue = intMatch.Value;
                     var timespan = TimeSpan.FromMilliseconds(long.Parse(initialValue));
                     var date = new DateTime(1970, 1, 1);
@@ -61,7 +68,6 @@ namespace ScaniaDemo_restapi.Controllers
 
                 match = match.NextMatch();
             }
-
             return newData;
         }
     }
