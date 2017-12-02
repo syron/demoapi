@@ -13,6 +13,16 @@ using System.Text.RegularExpressions;
 
 namespace ScaniaDemo_restapi.Controllers
 {
+    public static class ScaniaRestaurants
+    {
+        public const string Syd = "https://eurest.mashie.com/public/menu/syd/0711f488?country=se";
+        public const string Snackviken = "https://eurest.mashie.com/public/menu/sn%C3%A4ckviken/bad07c57?country=se";
+        public const string Sjokringlan = "https://eurest.mashie.com/public/menu/sj%C3%B6kringlan/9104e9a0?country=se";
+        public const string Stalhamnra = "https://eurest.mashie.com/public/menu/st%C3%A5lhamra/9986abfd?country=se";
+        public const string Restaurang270 = "https://eurest.mashie.com/public/menu/270/663dc8bf?country=se";
+        public const string Chassi = "https://eurest.mashie.com/public/menu/chassi/4445da66?country=se";
+    }
+
     [Route("api/[controller]")]
     public class LunchController : Controller
     {
@@ -20,10 +30,8 @@ namespace ScaniaDemo_restapi.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
-            var url = "https://eurest.mashie.com/public/menu/sn%C3%A4ckviken/bad07c57?country=se";
-            //url = "https://eurest.mashie.com/public/menu/sj%C3%B6kringlan/9104e9a0?country=se";
-
-            return await GetMenu(url);
+            
+            return await GetMenu(ScaniaRestaurants.Snackviken);
         }
 
         private async Task<string> GetMenu(string url) {
