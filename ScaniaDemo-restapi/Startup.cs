@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using ScaniaDemo_restapi.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace ScaniaDemo_restapi
@@ -32,6 +33,8 @@ namespace ScaniaDemo_restapi
                        .AllowAnyHeader();
             }));
             services.AddMvc();
+
+            services.AddTransient<IRestaurants, Restaurants>();
 
             services.AddSwaggerGen(c =>
             {
