@@ -7,6 +7,8 @@ namespace ScaniaDemo_restapi.Repositories
 {
     public interface IRestaurants
     {
+        IList<Restaurant> GetAll();
+
         Restaurant GetById(int id);
 
         Restaurant GetByName(string name);

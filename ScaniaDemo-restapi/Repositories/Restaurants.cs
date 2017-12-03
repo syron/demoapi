@@ -20,6 +20,10 @@ namespace ScaniaDemo_restapi.Repositories
             _restaurants.Add(new Restaurant(6, "Restaurang270", "https://eurest.mashie.com/public/menu/syd/0711f488?country=se"));
         }
 
+        public IList<Restaurant> GetAll() {
+            return _restaurants;
+        }
+
         public Restaurant GetById(int id) {
             return _restaurants.FirstOrDefault(r => r.Id == id);
         }
