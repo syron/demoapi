@@ -15,7 +15,8 @@ namespace ScaniaDemo_restapi.Controllers
     {
         private readonly ICurrencyConverter _currencyConverter;
 
-        public CurrenciesController(ICurrencyConverter currencyConverter) {
+        public CurrenciesController(ICurrencyConverter currencyConverter)
+        {
             _currencyConverter = currencyConverter;
         }
 

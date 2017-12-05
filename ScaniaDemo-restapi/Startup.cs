@@ -39,7 +39,7 @@ namespace ScaniaDemo_restapi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Trucks API", Version = "v1.0.0" });
+                c.SwaggerDoc("v1", new Info { Title = "Restaurant API", Version = "v1.0.0" });
             });
         }
 
@@ -54,7 +54,7 @@ namespace ScaniaDemo_restapi
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Trucks API v1.0.0");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Restaurant API v1.0.0");
             });
 
             app.UseCors("TrucksPolicy");

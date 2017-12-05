@@ -7,11 +7,13 @@ namespace ScaniaDemo_restapi.Models
     {
         public int RestaurantId { get; set; }
         public string Name { get; set; }
+        public string DisplayName { get; set; }
    
-        public IList<ScaniaWeek> Weeks { get; set}
+        public IList<ScaniaWeek> Weeks { get; set;  }
 
         public ScaniaRestaurant()
         {
+            
         }
     }
 }
