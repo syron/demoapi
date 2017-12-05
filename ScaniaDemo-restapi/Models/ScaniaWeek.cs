@@ -11,7 +11,7 @@ namespace ScaniaDemo_restapi.Models
             set;
         }
 
-        public IList<ScaniaDay> Days { get; set; }
+        public IList<ScaniaDay> Menus { get; set; }
 
         public ScaniaWeek()
         {

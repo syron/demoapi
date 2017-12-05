@@ -4,8 +4,10 @@
       <File FileName="ScaniaDemo-restapi/Controllers/RestaurantsController.cs" Line="21" Column="9" />
       <File FileName="ScaniaDemo-restapi/Startup.cs" Line="48" Column="10" />
       <File FileName="ScaniaDemo-restapi/Controllers/CurrenciesController.cs" Line="22" Column="9" />
-      <File FileName="ScaniaDemo-restapi/Converter/ScaniaRestaurantConverter.cs" Line="19" Column="17" />
+      <File FileName="ScaniaDemo-restapi/Converter/ScaniaRestaurantConverter.cs" Line="25" Column="28" />
       <File FileName="ScaniaDemo-restapi/Controllers/LunchController.cs" Line="34" Column="44" />
+      <File FileName="ScaniaDemo-restapi/Models/WeeklyMenu.cs" Line="36" Column="10" />
+      <File FileName="ScaniaDemo-restapi/Models/ScaniaWeek.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

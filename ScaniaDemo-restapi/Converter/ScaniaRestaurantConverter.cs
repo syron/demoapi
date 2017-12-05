@@ -22,7 +22,7 @@ namespace ScaniaDemo_restapi.Converter
 
                 var scaniaWeek = new ScaniaWeek();
                 scaniaWeek.WeekNumber = week.WeekNumber;
-                scaniaWeek.Days = new List<ScaniaDay>();
+                scaniaWeek.Menus = new List<ScaniaDay>();
 
                 foreach (var day in week.Days) {
                     ScaniaDay scaniaDay = new ScaniaDay();
@@ -35,7 +35,7 @@ namespace ScaniaDemo_restapi.Converter
                         meal.Name = dayMenu.MenuPresentation.DayMenuName;
                         scaniaDay.Meals.Add(meal);
                     }
-                    scaniaWeek.Days.Add(scaniaDay);
+                    scaniaWeek.Menus.Add(scaniaDay);
                 }
                 scaniaRestaurant.Weeks.Add(scaniaWeek);
 
