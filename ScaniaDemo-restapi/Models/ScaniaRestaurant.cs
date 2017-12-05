@@ -3,17 +3,14 @@ using System.Collections.Generic;
 
 namespace ScaniaDemo_restapi.Models
 {
-    public class ScaniaMenu
+    public class ScaniaRestaurant
     {
-        public Restaurant Restaurant
-        {
-            get;
-            set;
-        }
+        public int RestaurantId { get; set; }
+        public string Name { get; set; }
    
         public IList<ScaniaWeek> Weeks { get; set}
 
-        public ScaniaMenu()
+        public ScaniaRestaurant()
         {
         }
     }

@@ -30,6 +30,10 @@ namespace ScaniaDemo_restapi.Controllers
         public async Task<WeeklyMenu> GetByRestaurantId(int restaurantId) 
         {
             var restaurant = _restaurants.GetById(restaurantId);
+
+            var newRestaurant = new ScaniaRestaurant();
+            newRestaurant.Restaurant = restaurant;
+
             return await restaurant.GetMenu();
         }
     }
