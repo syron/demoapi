@@ -1,9 +1,16 @@
 ﻿<Properties StartupConfiguration="{355D5C7A-366F-4402-AFC9-D0D400875E93}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ScaniaDemo-restapi/Models/DayMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ScaniaDemo-restapi/Models/ScaniaMeal.cs">
     <Files>
       <File FileName="ScaniaDemo-restapi/Models/Day.cs" Line="18" Column="10" />
       <File FileName="ScaniaDemo-restapi/Models/Menu.cs" Line="12" Column="10" />
-      <File FileName="ScaniaDemo-restapi/Models/DayMenu.cs" Line="68" Column="17" />
+      <File FileName="ScaniaDemo-restapi/Models/DayMenu.cs" Line="6" Column="29" />
+      <File FileName="ScaniaDemo-restapi/Controllers/LunchController.cs" Line="19" Column="46" />
+      <File FileName="ScaniaDemo-restapi/Models/Scania/Menu.cs" Line="8" Column="10" />
+      <File FileName="ScaniaDemo-restapi/Models/ScaniaRestaurant.cs" Line="13" Column="9" />
+      <File FileName="ScaniaDemo-restapi/Models/Restaurant.cs" Line="88" Column="46" />
+      <File FileName="ScaniaDemo-restapi/Models/ScaniaWeek.cs" Line="16" Column="2" />
+      <File FileName="ScaniaDemo-restapi/Models/ScaniaDay.cs" Line="5" Column="6" />
+      <File FileName="ScaniaDemo-restapi/Models/ScaniaMeal.cs" Line="12" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
