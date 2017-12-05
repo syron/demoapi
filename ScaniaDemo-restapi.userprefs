@@ -1,8 +1,7 @@
 ﻿<Properties StartupConfiguration="{355D5C7A-366F-4402-AFC9-D0D400875E93}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ScaniaDemo-restapi/Repositories/Restaurants.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ScaniaDemo-restapi/Controllers/LunchController.cs">
     <Files>
-      <File FileName="ScaniaDemo-restapi/Controllers/LunchController.cs" Line="23" Column="31" />
-      <File FileName="ScaniaDemo-restapi/Repositories/Restaurants.cs" Line="19" Column="54" />
+      <File FileName="ScaniaDemo-restapi/Controllers/LunchController.cs" Line="29" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -26,14 +26,6 @@ namespace ScaniaDemo_restapi.Controllers
         }
 
         [HttpGet]
-        public async Task<string> Get()
-        {
-            var restaurant = _restaurants.GetByName("Syd");
-
-            return await restaurant.GetMenu();
-        }
-
-        [HttpGet]
         [Route("{restaurantId}")]
         public async Task<string> GetByRestaurantId(int restaurantId) 
         {
