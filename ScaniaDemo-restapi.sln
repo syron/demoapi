@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaniaDemo-restapi", "ScaniaDemo-restapi\ScaniaDemo-restapi.csproj", "{355D5C7A-366F-4402-AFC9-D0D400875E93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaniaDemo_restapi", "ScaniaDemo-restapi\ScaniaDemo_restapi.csproj", "{355D5C7A-366F-4402-AFC9-D0D400875E93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

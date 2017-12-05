@@ -28941,9 +28941,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/robertmayer/Projects/ScaniaDemo-restapi/ScaniaDemo-restapi/ScaniaDemo-restapi.csproj",
-      "projectName": "ScaniaDemo-restapi",
-      "projectPath": "/Users/robertmayer/Projects/ScaniaDemo-restapi/ScaniaDemo-restapi/ScaniaDemo-restapi.csproj",
+      "projectUniqueName": "/Users/robertmayer/Projects/ScaniaDemo-restapi/ScaniaDemo-restapi/ScaniaDemo_restapi.csproj",
+      "projectName": "ScaniaDemo_restapi",
+      "projectPath": "/Users/robertmayer/Projects/ScaniaDemo-restapi/ScaniaDemo-restapi/ScaniaDemo_restapi.csproj",
       "packagesPath": "/Users/robertmayer/.nuget/packages/",
       "outputPath": "/Users/robertmayer/Projects/ScaniaDemo-restapi/ScaniaDemo-restapi/obj",
       "projectStyle": "PackageReference",

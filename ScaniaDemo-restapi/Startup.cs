@@ -35,6 +35,7 @@ namespace ScaniaDemo_restapi
             services.AddMvc();
 
             services.AddTransient<IRestaurants, Restaurants>();
+            services.AddTransient<ICurrencyConverter, CurrencyConverter>();
 
             services.AddSwaggerGen(c =>
             {

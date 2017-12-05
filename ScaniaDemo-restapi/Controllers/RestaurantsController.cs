@@ -19,7 +19,6 @@ namespace ScaniaDemo_restapi.Controllers
             _restaurants = restaurants;
         }
 
-        // GET: api/values
         [HttpGet]
         public IEnumerable<Restaurant> Get()
         {

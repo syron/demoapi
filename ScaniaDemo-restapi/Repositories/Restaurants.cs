@@ -9,7 +9,8 @@ namespace ScaniaDemo_restapi.Repositories
     {
         private List<Restaurant> _restaurants { get; set; }
 
-        public Restaurants() {
+        public Restaurants()
+        {
             _restaurants = new List<Restaurant>();
 
             _restaurants.Add(new Restaurant(1, "Chassi", "https://eurest.mashie.com/public/menu/syd/0711f488?country=se"));
@@ -20,15 +21,18 @@ namespace ScaniaDemo_restapi.Repositories
             _restaurants.Add(new Restaurant(6, "Restaurang270", "https://eurest.mashie.com/public/menu/syd/0711f488?country=se"));
         }
 
-        public IList<Restaurant> GetAll() {
+        public IList<Restaurant> GetAll()
+        {
             return _restaurants;
         }
 
-        public Restaurant GetById(int id) {
+        public Restaurant GetById(int id)
+        {
             return _restaurants.FirstOrDefault(r => r.Id == id);
         }
 
-        public Restaurant GetByName(string name) {
+        public Restaurant GetByName(string name)
+        {
             return _restaurants.FirstOrDefault(r => r.Name == name);
         }
     }

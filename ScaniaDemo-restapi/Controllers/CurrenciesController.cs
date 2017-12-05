@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ScaniaDemo_restapi.Repositories;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,29 +13,24 @@ namespace ScaniaDemo_restapi.Controllers
     [Route("api/[controller]")]
     public class CurrenciesController : Controller
     {
+        private readonly ICurrencyConverter _currencyConverter;
+
+        public CurrenciesController(ICurrencyConverter currencyConverter) {
+            _currencyConverter = currencyConverter;
+        }
+
         // GET: api/values
         [HttpGet]
-        public string Get()
+        public async Task<string> Get()
         {
-            var url = "https://api.fixer.io/latest";
-
-            var client = new HttpClient();
-            var stringTask = client.GetStringAsync(url);
-            stringTask.Wait();
-
-            return stringTask.Result;
+            return await _currencyConverter.GetCurrencies();
         }
 
         [HttpGet]
         [Route("{paramBase}")]
-        public string GetByBase(string paramBase)
+        public async Task<string> GetByBase(string paramBase)
         {
-            var url = $"https://api.fixer.io/latest?base={paramBase}";
-            var client = new HttpClient();
-            var stringTask = client.GetStringAsync(url);
-            stringTask.Wait();
-
-            return stringTask.Result;
+            return await _currencyConverter.GetCurrencies(paramBase);
         }
     }
 }
