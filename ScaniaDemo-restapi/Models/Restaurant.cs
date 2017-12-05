@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
+using Newtonsoft.Json;
 
 namespace ScaniaDemo_restapi.Models
 {
@@ -40,7 +41,7 @@ namespace ScaniaDemo_restapi.Models
             set;
         }
 
-        public async Task<string> GetMenu()
+        public async Task<WeeklyMenu> GetMenu()
         {
             var client = new HttpClient();
             HttpResponseMessage result = await client.GetAsync(Url);
@@ -83,7 +84,8 @@ namespace ScaniaDemo_restapi.Models
 
                 match = match.NextMatch();
             }
-            return newData;
+
+            return JsonConvert.DeserializeObject<WeeklyMenu>(newData);
         }
     }
 }
