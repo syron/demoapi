@@ -16,10 +16,11 @@ namespace ScaniaDemo_restapi.Models
         {
         }
 
-        public Restaurant(int id, string name, string url) 
+        public Restaurant(int id, string name, string displayName, string url) 
         {
             Id = id;
             Name = name;
+            DisplayName = displayName;
             Url = url;
         }
 
@@ -30,6 +31,12 @@ namespace ScaniaDemo_restapi.Models
         }
 
         public string Name
+        {
+            get;
+            set;
+        }
+
+        public string DisplayName
         {
             get;
             set;
