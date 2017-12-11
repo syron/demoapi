@@ -35,6 +35,11 @@ namespace ScaniaDemo_restapi.Models
             set;
         }
 
+        public string DisplayName {
+            get;
+            set;
+        }
+
         public string Url
         {
             get;

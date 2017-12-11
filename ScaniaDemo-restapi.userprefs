@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{355D5C7A-366F-4402-AFC9-D0D400875E93}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ScaniaDemo-restapi/Converter/ScaniaRestaurantConverter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ScaniaDemo-restapi/Repositories/Restaurants.cs">
     <Files>
       <File FileName="ScaniaDemo-restapi/Controllers/RestaurantsController.cs" Line="21" Column="9" />
-      <File FileName="ScaniaDemo-restapi/Startup.cs" Line="48" Column="10" />
+      <File FileName="ScaniaDemo-restapi/Startup.cs" Line="52" Column="14" />
       <File FileName="ScaniaDemo-restapi/Controllers/CurrenciesController.cs" Line="22" Column="9" />
-      <File FileName="ScaniaDemo-restapi/Converter/ScaniaRestaurantConverter.cs" Line="25" Column="28" />
-      <File FileName="ScaniaDemo-restapi/Controllers/LunchController.cs" Line="34" Column="44" />
+      <File FileName="ScaniaDemo-restapi/Converter/ScaniaRestaurantConverter.cs" Line="16" Column="29" />
+      <File FileName="ScaniaDemo-restapi/Controllers/LunchController.cs" Line="8" Column="30" />
       <File FileName="ScaniaDemo-restapi/Models/WeeklyMenu.cs" Line="36" Column="10" />
       <File FileName="ScaniaDemo-restapi/Models/ScaniaWeek.cs" Line="21" Column="1" />
+      <File FileName="ScaniaDemo-restapi/Models/Restaurant.cs" Line="64" Column="13" />
+      <File FileName="ScaniaDemo-restapi/Repositories/Restaurants.cs" Line="25" Column="56" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
