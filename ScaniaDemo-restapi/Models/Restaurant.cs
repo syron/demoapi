@@ -36,12 +36,7 @@ namespace ScaniaDemo_restapi.Models
             set;
         }
 
-<<<<<<< HEAD
         public string DisplayName {
-=======
-        public string DisplayName
-        {
->>>>>>> 7346f118c5b9de115c9568d11e1f6e6d6a68891c
             get;
             set;
         }
