@@ -8,8 +8,9 @@
       <File FileName="ScaniaDemo-restapi/Controllers/LunchController.cs" Line="8" Column="30" />
       <File FileName="ScaniaDemo-restapi/Models/WeeklyMenu.cs" Line="36" Column="10" />
       <File FileName="ScaniaDemo-restapi/Models/ScaniaWeek.cs" Line="21" Column="1" />
-      <File FileName="ScaniaDemo-restapi/Models/Restaurant.cs" Line="64" Column="13" />
-      <File FileName="ScaniaDemo-restapi/Repositories/Restaurants.cs" Line="25" Column="56" />
+      <File FileName="ScaniaDemo-restapi/Models/Restaurant.cs" Line="1" Column="1" />
+      <File FileName="ScaniaDemo-restapi/Repositories/Restaurants.cs" Line="15" Column="1" />
+      <File FileName="ScaniaDemo-restapi/Repositories/IRestaurants.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
