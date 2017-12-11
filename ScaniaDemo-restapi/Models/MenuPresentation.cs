@@ -8,7 +8,7 @@ namespace ScaniaDemo_restapi.Models
         public int WeekType { get; set; }
         public Guid? OrgId { get; set; }
         public string MenuAlternativeName { get; set; }
-        public int MenuAlternativeOrder { get; set; }
+        public int? MenuAlternativeOrder { get; set; }
         public string DayMenuInfo { get; set; }
         public string DayMenuName { get; set; }
         public Guid? PortionTypeId { get; set; }

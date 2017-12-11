@@ -12,8 +12,6 @@ namespace ScaniaDemo_restapi.Repositories
         public Restaurants()
         {
             _restaurants = new List<Restaurant>();
-
-
             _restaurants.Add(new Restaurant(1, "Chassi", "Chassi", "https://eurest.mashie.com/public/menu/chassi/4445da66?country=se")); //Done
             _restaurants.Add(new Restaurant(2, "Syd", "Syd", "https://eurest.mashie.com/public/menu/syd/0711f488?country=se")); //Done
             _restaurants.Add(new Restaurant(3, "RestaurangSSE", "Scania Sverige SSE", "https://eurest.mashie.com/public/menu/chassi/9628a022?country=se")); //Done
