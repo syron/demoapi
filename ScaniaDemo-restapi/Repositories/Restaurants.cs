@@ -23,7 +23,7 @@ namespace ScaniaDemo_restapi.Repositories
             _restaurants.Add(new Restaurant(7, "Granpark", "Granpark", "https://eurest.mashie.com/public/menu/granpark/b4c46dcd?country=se")); //Done
             _restaurants.Add(new Restaurant(8, "Karpen", "Karpen", "https://eurest.mashie.com/public/menu/Sjökringlan/50D2C169?country=se")); //Done
             _restaurants.Add(new Restaurant(9, "Motorkringlan", "Motorkringlan","https://eurest.mashie.com/public/menu/motorkringlan/12128ca7?country=se")); //Done
-            _restaurants.Add(new Restaurant(10, "Snäckviken", "https://eurest.mashie.com/public/menu/sn%C3%A4ckviken/bad07c57?country=se"));
+            _restaurants.Add(new Restaurant(10, "Snackviken", "Snäckviken",  "https://eurest.mashie.com/public/menu/sn%C3%A4ckviken/bad07c57?country=se"));
         }
 
         public IList<Restaurant> GetAll()
